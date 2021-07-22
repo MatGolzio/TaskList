@@ -1,0 +1,46 @@
+/* Geral */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    width: 1080px;
+    margin: 0px auto;
+}
+
+.logo {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+
+#mainMenu li {
+    display: inline;
+    margin-right: 5px;
+}
+
+#mainMenu {
+    list-style-type: none;
+}
+
+#mainMenu li a {
+    color: white;
+    text-decoration: none;
+}
+
+#mainMenu li a:hover {
+    color: black;
+    transition: 0.2s;
+}
