@@ -34,8 +34,9 @@
         $conn -> exec($query);
 
     } catch(PDOException $error) {
-        echo "Encontramos um erro, contate o desenvolvedor.<br>";
-        echo "Número do erro: " . $error -> getCode() . " | Erro: " . $error -> getMessage();
+        echo "Ocorreu um erro, contate o desenvolvedor (<a href='https://github.com/MatGolzio/TaskList'>Repositório</a>)<br><br>";
+        echo "Número do erro: " . $e-> getCode() . " | Erro: " . $e-> getMessage() . "<br><br>";
+        echo "<a href='../index.php'>Voltar para a tela incial</a>";
     }
 
 ?>

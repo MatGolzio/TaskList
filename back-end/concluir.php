@@ -2,11 +2,6 @@
     try {
         include_once('create_all.php');
 
-        // variáveis do formulário
-        $nome = $_POST['nome'];
-        $desc = $_POST['desc'];
-        $data = $_POST['data'];
-
         // variáveis de configuração
         $dns = "mysql:host=localhost;dbname=sistema_tasks";
         $user = 'root';
@@ -14,20 +9,17 @@
         // nova conexão
         $conn = new PDO($dns, $user, "");
 
-        $query_add = "INSERT INTO tasks (nome, descricao, data_de_conclusao, concluida) VALUES (:nome, :desc, :data, 'false');";
+        $nome = $_GET['nome'];
+        $desc = $_GET['desc'];
+        $data = $_GET['data'];
 
-        $stmt = $conn -> prepare($query_add);
+        $query_up = "UPDATE tasks SET concluida = 'true' WHERE nome = '$nome' AND descricao = '$desc' AND data_de_conclusao = '$data'";
 
-        $stmt-> bindValue(':nome', $nome);
-        $stmt-> bindValue(':desc', $desc);
-        $stmt-> bindValue(':data', $data);
-
-        $run = $stmt->execute();
+        $run = $conn -> exec($query_up);
 
         if ($run == FALSE) {
-            echo "<script>alert('Não foi possível adicionar sua task');</script>";
+            echo "<script>alert('Não foi possível concluir sua task');</script>";
         } else {
-            echo "<script>alert('Task adicionada com sucesso!');</script>";
             echo "<script>window.location.href='../minhas_tasks.php'</script>";
         }
     } catch (PDOException $e) {
