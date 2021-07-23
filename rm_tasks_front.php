@@ -35,7 +35,6 @@
 
                 <li><a href='index.php' style='text-decoration: none;color: black;'>Adicionar Task</a></li>
                 <li><a href='#' style='text-decoration: none;color: black;'>Remover Task</a></li>
-                <li><a href='' style='text-decoration: none;color: black;'>Editar Task</a></li>
                 <li><a href='minhas_tasks.php' style='text-decoration: none;color: black;'>Minhas Tasks</a></li>
 
             </ul>
