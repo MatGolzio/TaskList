@@ -29,10 +29,31 @@
         </ul>
     </div>
 
-    <section id="content">
+    <div class='container'>
+        <aside style='width: 20%;border: 2px solid #00e87b;border-radius: 5px 0px 0px 5px;float: left;margin-top: 40px;padding: 20px;height: 114px;'>
+            <ul style='list-style-type: none;'>
 
-        hello
+                <li><a href='#' style='text-decoration: none;color: black;'>Adicionar Task</a></li>
+                <li><a href='' style='text-decoration: none;color: black;'>Remover Task</a></li>
+                <li><a href='' style='text-decoration: none;color: black;'>Editar Task</a></li>
 
-    </section>
+            </ul>
+        </aside>
+        <section id="content" style="border: 2px solid #00e87b;border-radius: 0px 5px 5px 0px;margin-top: 40px;width: 70%;float: left;padding: 20px;">
+
+            <h3>Adicionar Task</h3>
+
+            <form method='POST' action='back-end/nova_task.php' style='border: 2px solid #00e87b;padding: 20px;margin-top: 10px;'>
+
+                <input type='text' style='border: 1px solid black;border-radius: 5px;padding:10px;' id='nome' name='nome' placeholder='Nome da Task'>
+                <input type='text'  style='border: 1px solid black;border-radius: 5px;padding:10px;' id='desc' name='desc' placeholder='Descrição'>
+                <input type='date'  style='border: 1px solid black;border-radius: 5px;padding:7px;' id='data' name='data' placeholder='Data de conclusão'>
+
+                <input style='background-color: #00e87b;padding: 10px;border: none;border-radius: 5px;color: white;cursor: pointer;' type='submit' value="Adicionar">
+
+            </form>
+
+        </section>
+    </div>
 </body>
 </html>
